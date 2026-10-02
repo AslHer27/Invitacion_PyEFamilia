@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Invitación-Dafne Paola y Esban Asbel</title>
+        <link rel="stylesheet" href="css/confirmacion.css">
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/invitacion/IMG_0863.PNG" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/omaga.css">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+         <style>
+            /* ESTILO GENERAL CON CURSIVA */
+            body { font-family: 'Great Vibes', cursive; background-color: #f3f2e9; margin: 0; padding: 0; }
+            .invitacion { color: rgb(212, 175, 55); }
+            h1 { color: #D4AF37; }
+            
+            #pantalla-intro { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: #f3f2e9; z-index: 9999; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; transition: opacity 0.8s ease, visibility 0.8s ease; padding: 20px; box-sizing: border-box; }
+            .contenedor-carta { cursor: pointer; transition: transform 0.3s ease; }
+            .contenedor-carta:hover { transform: scale(1.05); }
+            .imagen-carta { max-width: 280px; width: 100%; height: auto; filter: drop-shadow(0px 8px 15px rgba(0,0,0,0.15)); }
+            .texto-intro { font-size: 38px; color: #D4AF37; margin-bottom: 20px; }
+            .btn-abrir { margin-top: 25px; background-color: #D4AF37; color: #ffffff; border: none; padding: 12px 30px; font-size: 24px; font-family: 'Montserrat', sans-serif !important; border-radius: 30px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); cursor: pointer; }
+            .oculto { opacity: 0; visibility: hidden; pointer-events: none; }
+
+            /* ======================================================= */
+            /* ¡HECHIZO PARA LETRA NORMAL EN LA CONFIRMACIÓN, TRAINER! */
+            /* ======================================================= */
+            .cuadro-confirmacion,
+            .cuadro-confirmacion label,
+            .cuadro-confirmacion input,
+            .cuadro-confirmacion button,
+            .cuadro-confirmacion div,
+            .cuadro-confirmacion span {
+                font-family: 'Montserrat', Arial, sans-serif !important;
+            }
+
+            .cuadro-confirmacion {
+                background: rgba(255, 255, 255, 0.95);
+                border-radius: 15px;
+                padding: 30px 25px;
+                max-width: 500px;
+                margin: 20px auto;
+                box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+                border: 1px solid #D4AF37;
+            }
+            .form-group-custom {
+                margin-bottom: 20px;
+                text-align: left;
+            }
+            .form-group-custom label {
+                font-size: 14px;
+                font-weight: 600;
+                color: #4a4a4a;
+                display: block;
+                margin-bottom: 6px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+            .form-control-custom {
+                width: 100%;
+                padding: 12px 15px;
+                font-size: 15px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                box-sizing: border-box;
+                transition: border-color 0.3s ease;
+            }
+            .form-control-custom:focus {
+                border-color: #D4AF37;
+                outline: none;
+                box-shadow: 0 0 5px rgba(212, 175, 55, 0.4);
+            }
+            .btn-confirmar {
+                width: 100%;
+                background-color: #D4AF37;
+                color: #ffffff;
+                font-size: 16px;
+                font-weight: bold;
+                padding: 14px;
+                border: none;
+                border-radius: 30px;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.2s ease;
+                box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+            }
+            .btn-confirmar:hover {
+                background-color: #b8952d;
+                transform: translateY(-2px);
+            }
+            .texto-radio {
+                font-family: 'Montserrat', Arial, sans-serif !important;
+                font-size: 15px;
+                margin-right: 10px;
+            }
+        </style>
+    <style>
+        body {
+            font-family: 'Great Vibes', cursive;
+            background-color: #f3f2e9; /* Fondo suave */
+            margin: 0;
+            padding: 0;
+        }
+        .invitacion {
+            color: rgb(212, 175, 55); /* Color dorado */
+        }
+        h1 {
+            color: #D4AF37; /* También puedes usar hex para el dorado */
+        }
+
+        /* ESTILOS PARA LA PANTALLA INTRO / SOBRE DE CARTA */
+        #pantalla-intro {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #f3f2e9;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .contenedor-carta {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .contenedor-carta:hover {
+            transform: scale(1.05);
+        }
+
+        .imagen-carta {
+            max-width: 280px;
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0px 8px 15px rgba(0,0,0,0.15));
+        }
+
+        .texto-intro {
+            font-size: 38px;
+            color: #D4AF37;
+            margin-bottom: 20px;
+        }
+
+        .btn-abrir {
+            margin-top: 25px;
+            background-color: #D4AF37;
+            color: #ffffff;
+            border: none;
+            padding: 12px 30px;
+            font-size: 24px;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 30px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+
+        /* Ocultar contenido mientras la intro esté activa */
+        .oculto {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+    </style>
+        
+    </head>
+    <body id="page-top">
+        
+
+        <!-- ========================================== -->
+        <!-- PANTALLA DE BIENVENIDA / CARTA INTRO      -->
+        <!-- ========================================== -->
+        <div id="pantalla-intro">
+            <div class="texto-intro">Tienes una invitación especial</div>
+            <div class="contenedor-carta" onclick="abrirInvitacion()">
+                <!-- Puedes cambiar 'assets/invitacion/iconoinvi.png' por la imagen de tu sobre o carta -->
+                <img src="assets/invitacion/IMG_0863.PNG" alt="Sobre de Invitación" class="imagen-carta">
+            </div>
+            <button class="btn-abrir" onclick="abrirInvitacion()">Abrir Invitación</button>
+        </div>
+
+        <!-- AUDIO DE FONDO EN BUCLE -->
+        <audio id="musicaFondo" loop preload="auto">
+            <source src="assets/invitacion/Neo.m4a" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+
+        <!-- Navigation-->
+       
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+              
+            </div>
+        </header>
+        <!-- Services-->
+        <!-- About-->
+        <section class="page-section" id="about">
+            <div class="container">
+                <div class="text-center" >
+                   
+               
+                <h3 class="timeline-body"><p class="text-muted">Hay momentos en la vida que son especiales por sí solos,<br>
+                    pero compartirlos con las personas que queremos los hace inolvidables.<br> <br> Con mucha alegría hemos decidido unir nuestras vidas y queremos que formes parte de este día tan especial. <br></p></h3>
+                    
+
+                    <div class="invitacion"></div></h3> <br>
+                    <div ><p style="font-size: 60px; color: #dbbd0f;"> Sres. Memfil Erick y Karen Paola <br>Sres. Esban Asbel y Claudia Liseth</p></div>
+                   
+                        <img src="assets/invitacion/IMGPAO233.jpeg" width="400" height="250" alt="">
+
+                    <div class="container">
+                        <div class="text-center">
+                            <h3 class="timeline-body"><p class="text-muted">Tienen el honor de invitar a usted y a su apreciable <br>
+                                familia al enlace matrimonial de nuestros hijos <br>
+                   
+
+                            <div class="invitacion"></div></h3> <br>
+                            <div ><p style="font-size: 60px; color: #dbbd0f;">Dafne Paola <br> y <br> Esban Asbel<br></p></div>
+                    
+                   
+                </div>
+
+                    <center>
+                    
+                  
+                
+            </center>
+                    
+                        <center>
+                        
+                            
+                   
+                </center>
+                
+               <hr>
+                <br>
+                    
+               
+                    <center>
+                        <div >
+                            <div ><p style="font-size: 60px; color: #000000;"> Ubicación</p></div>
+                      
+                            
+                               
+                        </div>
+                    
+                    <div >
+                        <div >
+                            <div ><p style="font-size: 37px; color: #000000;"> Recepción y Boda</p></div>
+                            
+                          
+                        </div>
+                        <div ><p style="font-size: 30px; color: #9e9b97;"> En el Salón del segundo nivel del restaurante Cotzic. <br> Sábado 07 de Noviembre. <br> Apartir de las 18:00 hrs </p></div>
+                        <img src="assets/invitacion/cot.jpg" width="400" height="450" alt="">
+                    </div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            
+                            <div ><p style="font-size: 60px; color: #000000;"> Ubicación del restaurante</p></div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15418.03844776346!2d-91.790558!3d14.96439!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x858e811d02400147%3A0x607f22f72fd8d97f!2sRestaurante%20Cotzic!5e0!3m2!1ses-419!2sgt!4v1727142899411!5m2!1ses-419!2sgt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    
+                </div>
+            </center>
+            <center>
+                        
+                <br>
+                <br>
+               
+       <hr>
+          <section class="page-section" id="contact">
+    <div class="container">
+        <div class="text-center">
+            <div><p style="font-size: 80px; color: #dbbd0f;">Confírmanos tu asistencia a la Recepción</p></div>
+        </div>
+        
+        <!-- AQUÍ ES DONDE LLAMAS A LA CLASE QUE PUSISTE EN TU CSS -->
+        <div class="seccion-contacto-fondo">
+            <center>
+                <!-- Aquí va el iframe de tu Google Forms -->
+               <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSetnlx2qtJbQ5WD4SSSkyBLHcIjyCCb_uI3j_WRQlXjAgRD0g/viewform?embedded=true" width="300" height="300" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+            </center>
+        </div>
+        
+    </div>
+</section>
+        
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Asbel2026</div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="#!">Política de Privacidad</a>
+                        <a class="link-dark text-decoration-none" href="#!">Términos de Servicios</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Scripts -->
+        <script src="js/scripts.js"></script>
+        <script>
+            function abrirInvitacion() {
+                const audio = document.getElementById('musicaFondo');
+                audio.play();
+                const intro = document.getElementById('pantalla-intro');
+                intro.classList.add('oculto');
+            }
+        </script>
+        <script>
+    // Bloquear scroll al cargar la página
+    document.body.style.overflow = 'hidden';
+
+    function abrirInvitacion() {
+        const audio = document.getElementById('musicaFondo');
+        audio.play();
+        const intro = document.getElementById('pantalla-intro');
+        intro.classList.add('oculto');
+        
+        // Permitir scroll únicamente después de presionar el botón
+        document.body.style.overflow = 'auto';
+    }
+</script>
+        <!-- SCRIPT MAGICO PARA GOOGLE SHEETS -->
+      
+    </body>
+</html>
