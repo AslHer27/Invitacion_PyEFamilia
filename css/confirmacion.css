@@ -1,0 +1,181 @@
+/* ESTILOS ELEGANTES PARA EL FORMULARIO DE CONFIRMACIÓN */
+.cuadro-confirmacion {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px 25px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+    border: 1px solid #D4AF37;
+}
+
+.form-group-custom {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group-custom label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a4a4a;
+    display: block;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-control-custom {
+    width: 100%;
+    padding: 12px 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-control-custom:focus {
+    border-color: #D4AF37;
+    outline: none;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.4);
+}
+
+.btn-confirmar {
+    width: 100%;
+    background-color: #D4AF37;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.btn-confirmar:hover {
+    background-color: #b8952d;
+    transform: translateY(-2px);
+}
+
+.seccion-contacto-fondo {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/invitacion/foto_novios.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px 15px;
+    border-radius: 20px;
+    margin: 30px auto;
+    max-width: 600px; /* Redujimos el ancho máximo para que la foto se vea más a los lados */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.seccion-contacto-fondo iframe {
+    width: 100%;
+    max-width: 500px; /* Hacemos el formulario de Google más angosto */
+    height: 850px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.95); /* Fondo semitransparente para que se intuya la foto detrás */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+/* ESTILOS PARA LA SECCIÓN DE CONTACTO CON FOTO DE FONDO */
+.seccion-contacto-fondo {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/invitacion/fot.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 20px;
+    border-radius: 20px;
+    margin: 30px auto;
+    max-width: 800px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.seccion-contacto-fondo iframe {
+    width: 100%;
+    max-width: 640px;
+    height: 900px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.95);
+}
+/* ========================================================================== */
+/* REGLAS RESPONSIVE PARA TELÉFONOS (PANTALLAS PEQUEÑAS)                     */
+/* ========================================================================== */
+
+/* Evita desplazamientos horizontales no deseados en todo el sitio */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Pantalla de introducción fija para que no se pueda desplazar hasta presionar el botón */
+#pantalla-intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Ajustes cuando la pantalla sea de celular (menos de 768px de ancho) */
+@media (max-width: 768px) {
+    /* Reducir títulos gigantes para que no rompan la pantalla del móvil */
+    .page-section p[style*="font-size: 80px"],
+    p[style*="font-size: 80px"] {
+        font-size: 38px !important;
+    }
+
+    p[style*="font-size: 60px"] {
+        font-size: 32px !important;
+    }
+
+    p[style*="font-size: 37px"] {
+        font-size: 24px !important;
+    }
+
+    p[style*="font-size: 30px"] {
+        font-size: 18px !important;
+    }
+
+    /* Ajustar la imagen del sobre en móviles */
+    .imagen-carta {
+        max-width: 200px !important;
+    }
+
+    .texto-intro {
+        font-size: 26px !important;
+    }
+
+    /* Ajustar las imágenes fijas de la ubicación y mapas */
+    img[src*="cot.jpg"] {
+        width: 100% !important;
+        max-width: 320px !important;
+        height: auto !important;
+    }
+
+    iframe[src*="maps"] {
+        width: 100% !important;
+        max-width: 320px !important;
+        height: 300px !important;
+    }
+
+    /* Ajustar el contenedor de la foto de los novios y el formulario */
+    .seccion-contacto-fondo {
+        padding: 20px 10px !important;
+        margin: 15px auto !important;
+        max-width: 95% !important;
+    }
+
+    .seccion-contacto-fondo iframe {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 750px !important;
+    }
+}
